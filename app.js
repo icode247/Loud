@@ -11,11 +11,15 @@ app.use(morgan("tiny"))
 app.use(express.static(path.join(__dirname + "/public")))
 
 // application routes
-app.use(require("./api/routes/dashboardRoute")(express))
-app.get("/", (req,res)=>{
-    console.log("request came here")
-    res.json({msg:"ya"})
+app.use(require("./api/routes/app")(express));
+app.use(require("./api/routes/admin")(express))
+app.use(require("./api/routes/authentication")(express))
+
+
+app.use((req,res, next)=>{
+    res.render("404.ejs")
 })
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{
     console.log(`server started at port ${PORT}`)

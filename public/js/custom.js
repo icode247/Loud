@@ -1,0 +1,1 @@
+var mobile=document.getElementById("mobile"),mobile_btn=document.getElementById("mobile-btn"),mobile_close=document.getElementById("mobile-close");mobile_btn.onclick=function(){mobile.classList.remove("hidden")};mobile_close.onclick=function(){mobile.classList.add("hidden")};

@@ -4,10 +4,18 @@ exports.index = (req,res) =>{
     res.render("index.ejs")
 }
 
-// @description dashboard route
+
+// @description feedback route
 //@method Get
-exports.dashboard = (req,res) =>{
-    res.render("dashboard.ejs")
+exports.feedback = (req,res)=>{
+    res.render("feedback.ejs");
 }
+
+// @description faq route
+//@method Get
+exports.faq = (req,res)=>{
+    res.render("faq.ejs")
+}
+
 
 module.exports = exports;
