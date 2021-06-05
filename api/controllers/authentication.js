@@ -6,4 +6,6 @@ exports.Signin = (req,res)=>{
 exports.Signup = (req,res)=>{
     res.render("authentication/signup")
 }
+
+
 module.exports = exports;

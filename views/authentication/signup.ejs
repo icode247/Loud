@@ -12,6 +12,7 @@
       href="/dist/tailwind.css"
       rel="stylesheet"
     />
+    <link href="/css/custom.css" rel="stylesheet"> 
     <style>
       @import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
 
@@ -47,6 +48,7 @@
           <form
             class="flex flex-col pt-3 md:pt-8"
             onsubmit="event.preventDefault();"
+            id="signupForm"
           >
             <div class="flex flex-col pt-4">
               <label for="name" class="text-lg">Name</label>
@@ -69,12 +71,13 @@
                   focus:shadow-outline
                 "
               />
+              <span id="name_msg" class="invalidVal"></span>
             </div>
             <div class="flex flex-col pt-4">
                 <label for="name" class="text-lg">Reg No.</label>
                 <input
                   type="text"
-                  id="name"
+                  id="regNumber"
                   placeholder="17M/0987/CS"
                   class="
                     shadow
@@ -91,6 +94,7 @@
                     focus:shadow-outline
                   "
                 />
+                <span id="reg_msg" class="invalidVal"></span>
               </div>
 
             <div class="flex flex-col pt-4">
@@ -114,6 +118,7 @@
                   focus:shadow-outline
                 "
               />
+              <span id="email_msg" class="invalidVal"></span>
             </div>
 
             <div class="flex flex-col pt-4">
@@ -137,6 +142,11 @@
                   focus:shadow-outline
                 "
               />
+              <span id="pass_msg" class="invalidVal"></span>
+              <span id="one">Should be more than 6 characters</span>
+              <span id="two">Should contain a number </span>
+              <span id="three">Should contian a letter</span>
+              <span id="four">Should contian special char</span>
             </div>
 
             <div class="flex flex-col pt-4">
@@ -162,6 +172,7 @@
                   focus:shadow-outline
                 "
               />
+              <span id="pass2_msg" class="invalidVal"></span>
             </div>
 
             <input
@@ -199,4 +210,5 @@
       </div>
     </div>
   </body>
+  <script src="/js/signup.js"></script>
 </html>

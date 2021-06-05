@@ -1,0 +1,14 @@
+.invalidVal{
+    border-radius: 4px;
+    line-height: 1;
+    padding: 2px 0 6px 6px;
+    color: #cc4b65;
+    }
+    input.invalid{
+      border: 1.5px solid #cc4b65;
+      color: #cc4b65;
+    }
+    input.valid {
+    border: 1.5px solid #4CAF50;
+    color: green;
+    }

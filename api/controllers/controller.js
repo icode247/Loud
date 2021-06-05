@@ -1,3 +1,4 @@
+const axios = require("axios").default;
 // @description root route
 //@method Get
 exports.index = (req,res) =>{
@@ -16,6 +17,5 @@ exports.feedback = (req,res)=>{
 exports.faq = (req,res)=>{
     res.render("faq.ejs")
 }
-
 
 module.exports = exports;

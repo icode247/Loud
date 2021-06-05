@@ -1,3 +1,4 @@
+const { Users } = require("../services/auth")
 // @description dashboard route
 //@method Get
 exports.dashboard = (req,res) =>{
@@ -9,5 +10,6 @@ exports.dashboard = (req,res) =>{
 exports.feeds = (req,res)=>{
     res.render("admin/feeds.ejs")
 }
+
 
 module.exports = exports;
