@@ -37,13 +37,8 @@ async function subForm() {
             email.classList.remove('valid')
             password.classList.remove('valid')
             pass_msg.innerHTML = "Incorrect email or password."
-        } else {
-            localStorage.setItem("token", response.token)
-            if (localStorage.getItem('last-route')) {
-                window.location.href = localStorage.getItem('last-route')
-            }else{
-                window.location.href = '/'
-            }
+        } else { 
+                window.location.href = '/feedback'
         }
     }
 
